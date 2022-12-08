@@ -1,8 +1,30 @@
-import {NavLink, Link} from 'react-router-dom';
-import Button from "../Button";
+import {NavLink, useNavigate} from 'react-router-dom';
 import './index.css';
+import {useDispatch, useSelector} from "react-redux";
+import Button from "../Button";
+import {setAuth} from "../../store/reducers/auth";
+
+import avatar from '../../img/avatar.png'
 
 const NavBar = () => {
+    const isAuthorised = useSelector(({isAuthorised}) => isAuthorised);
+    const dispatch = useDispatch();
+    const navigate = useNavigate()
+
+    const buttonText = isAuthorised ? 'Log out' : 'login';
+
+
+    const handleUser = () => {
+        navigate('/profile')
+    }
+
+    const handleAuth = () => {
+        if (!isAuthorised) {
+            navigate('/login');
+        } else {
+            dispatch(setAuth(false))
+        }
+    }
 
     return (
         <div className='navigation'>
@@ -12,13 +34,19 @@ const NavBar = () => {
                 <li><NavLink to="/profile">Profile</NavLink></li>
                 <li><NavLink to="/table">Table</NavLink></li>
             </ul>
-            <div className='container-log'>
-                <div className='user-part'>
-                    <Link to="/profile">Admin</Link>
-                </div>
+            <div className='auth-container'>
+                {isAuthorised &&
+                    <button
+                        className='user'
+                        onClick={handleUser}
+                    >
+                        <img src={avatar} width='20px' height='20px' alt="username"/>
+                        <div>Admin</div>
+                    </button>
+                }
                 <Button
-                    className="auth-button"
-                    buttonText="button"
+                    buttonText={buttonText}
+                    onClick={handleAuth}
                 />
             </div>
         </div>

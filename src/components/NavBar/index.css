@@ -13,28 +13,30 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
-.container-log {
+.auth-container {
     display: flex;
-    box-shadow: 0 0 5px rgb(29, 28, 28);
     padding: 5px 10px;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
 }
 
-.user-part {
-    background: rgb(87, 85, 85);
+.user {
+    background: rgb(159, 149, 149);
     border-radius: 5px;
     margin: 0 10px 0 0;
     display: flex;
+    align-items: center;
+    padding: 0 5px;
 }
 
-.avatar {
-    /*background: url("../../img/avatar.png");*/
-    width: 30px;
-    height: 30px;
-    background-size: cover;
-    border-radius: 50%;
-    margin: 0 0 0 5px;
+.user:hover {
+    background: #b69090;
+    color: rgb(16, 15, 15);
+    box-shadow: 0 0 5px rgb(29, 28, 28);
+}
+
+img {
+    margin: 0 5px 0;
 }
 
 ul {
