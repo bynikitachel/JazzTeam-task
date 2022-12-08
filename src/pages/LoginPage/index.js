@@ -2,6 +2,7 @@ import {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useDispatch} from "react-redux";
 import {setAuth} from "../../store/reducers/auth";
+import InvalidAuth from '../../components/InvalidAuth';
 
 import './index.css';
 
@@ -12,6 +13,7 @@ const ADMIN = {name: 'Admin', password: '12345678'};
 const LoginPage = () => {
     const [userName, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [isInvalid, setIsInvalid] = useState(false);
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -19,6 +21,8 @@ const LoginPage = () => {
         if (userName === ADMIN.name && password === ADMIN.password){
             dispatch(setAuth(true));
             navigate('/profile');
+        } else {
+            setIsInvalid(true);
         }
     };
 
@@ -38,6 +42,7 @@ const LoginPage = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder='password'
                 />
+                {isInvalid && <InvalidAuth />}
             </div>
             <button
                 className='form-button'
