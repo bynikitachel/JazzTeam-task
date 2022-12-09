@@ -30,12 +30,14 @@ const LoginPage = () => {
         <div className='form-container'>
             <div className='inputs-container'>
                 <h1>Admin</h1>
+                <h4>Input username</h4>
                 <input
                     type='text'
                     value={userName}
                     onChange={(e) => setUsername(e.target.value)}
                     placeholder='username'
                 />
+                <h4>Input password</h4>
                 <input
                     type='password'
                     value={password}

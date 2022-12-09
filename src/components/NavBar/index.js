@@ -32,7 +32,7 @@ const NavBar = () => {
                 <li><NavLink to="/">Main</NavLink></li>
                 <li><NavLink to="/info">Info</NavLink></li>
                 <li><NavLink to="/profile">Profile</NavLink></li>
-                <li><NavLink to="/table">Table</NavLink></li>
+                {isAuthorised && <li><NavLink to="/table">Table</NavLink></li>}
             </ul>
             <div className='auth-container'>
                 {isAuthorised &&
