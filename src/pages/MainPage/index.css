@@ -1,0 +1,16 @@
+.main-list {
+    flex-direction: column;
+    background-color: rgb(70, 65, 65);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    padding: 40px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.list-item {
+    text-align: left;
+    list-style: decimal;
+    list-style-position: inside;
+    padding: 1%;
+    margin: 0;
+}

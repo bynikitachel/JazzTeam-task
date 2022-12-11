@@ -8,7 +8,7 @@ import './index.css';
 
 const TablePage = () => {
 
-    const isAuthorised = useSelector(({isAuthorised}) => isAuthorised);
+    const isAuthorised = useSelector(({auth}) => auth.isAuthorised);
     const navigate = useNavigate();
     const [counter, setCounter] = useState(0);
     const allRows = superHeroes.members.length;
@@ -76,7 +76,7 @@ const TablePage = () => {
                     <div>Selected rows: {counter}</div>
                     <div>All rows: {allRows}</div>
                 </div>
-                <table>
+                <table className="table-body">
                     <thead>
                     <tr className='table-head'>
                         <th className='first-column'>Select</th>

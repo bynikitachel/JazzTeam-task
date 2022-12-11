@@ -27,7 +27,7 @@
     padding: 10px;
 }
 
-table {
+.table-body {
     height: 400px;
     overflow: auto;
     width: 100%;
@@ -50,7 +50,7 @@ table {
     padding: 10px;
 }
 
-td {
+.row td {
     padding: 10px;
     background: rgb(180, 176, 176);
     color: rgb(0, 0, 0);
@@ -72,8 +72,7 @@ td {
 tr .first-column {
     background: rgb(87, 85, 85);
 }
-
-tr td {
+ .row td {
     background: rgb(180, 176, 176) !important;
 }
 

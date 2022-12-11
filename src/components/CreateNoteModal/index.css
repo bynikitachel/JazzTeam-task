@@ -1,0 +1,22 @@
+.create-note-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #c2c0c0;
+    width: 50%;
+    height: 50%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100000000;
+}
+
+textarea {
+    margin: 50px 20px 20px 20px;
+    height: 100%;
+}
+.buttons-container{
+    justify-content: flex-end;
+    padding: 0 20px 20px 0;
+}

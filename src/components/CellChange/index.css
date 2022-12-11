@@ -1,0 +1,47 @@
+.container-change {
+    position: relative;
+    height: 100%;
+}
+
+.container-textarea-buttons {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 1);
+    width: 100%;
+    bottom: -36px;
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(123, 129, 129);
+    outline: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+textarea {
+    /* position: absolute; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.cell-cancel {
+    left: 50px;
+    background-color: brown;
+    color: aliceblue;
+}
+
+.cell-ok {
+    margin-right: 5px;
+    margin: 5px;
+    background-color: rgb(56, 197, 120);
+    color: aliceblue;
+}
+
+.cell-cancel:hover,
+.cell-ok:hover {
+    background-color: aliceblue;
+    color: black;
+}

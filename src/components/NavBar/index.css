@@ -56,10 +56,6 @@ li a:active {
     padding: 0 10px;
 }
 
-li {
-    margin: 0 10px;
-}
-
 a:hover,
 .active {
     background: #444;
