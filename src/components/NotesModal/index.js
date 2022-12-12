@@ -14,7 +14,7 @@ const NotesModal = ({ notes, handleClose }) => {
   return (
     <div className="notes-modal">
       <h1>Notes</h1>
-      <ul className={'notes-list'}>{renderNotes}</ul>
+      <ul className='notes-list'>{renderNotes}</ul>
       <button className="close" onClick={handleClose}>
         Close
       </button>

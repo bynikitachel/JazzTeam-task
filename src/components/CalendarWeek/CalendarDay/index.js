@@ -47,10 +47,8 @@ const CalendarDay = ({ state, setState, date, index, setIsOpenModal }) => {
         onClick={() => handleDayClick(date)}
       >
         <div>{date.getDate()}</div>
-        <Button className="add-button" buttonText={'+'} onClick={handleDayDoubleClick} />
-        <div>
-          <p>notes: {notes.length}</p>
-        </div>
+        <Button className="add-button" buttonText="+" onClick={handleDayDoubleClick} />
+        <div>notes: {notes.length}</div>
         {isOpenModalNotes && !!notes.length && <NotesModal notes={notes} handleClose={handleClose} />}
       </td>
     ) : (
@@ -59,7 +57,7 @@ const CalendarDay = ({ state, setState, date, index, setIsOpenModal }) => {
   }
   const renderDay = day()
 
-  return <>{renderDay}</>
+  return renderDay
 }
 
 export default CalendarDay
