@@ -13,7 +13,7 @@ const CreateNoteModal = ({editingNote = '', handleAddEvent, handleCancelModal}) 
                 value={textNote}
                 onChange={e => setTextNote(e.target.value)}
             ></textarea>
-            <div className='buttons-container'>
+            <div className='modal-buttons-container'>
                 <Button
                     buttonText='Cancel'
                     onClick={() => handleCancelModal(false)}

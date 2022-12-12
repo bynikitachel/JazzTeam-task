@@ -16,7 +16,8 @@ textarea {
     margin: 50px 20px 20px 20px;
     height: 100%;
 }
-.buttons-container{
+.modal-buttons-container{
+    display: flex;
     justify-content: flex-end;
     padding: 0 20px 20px 0;
 }

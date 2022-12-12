@@ -7,8 +7,8 @@ const NotesModal = ({notes,handleClose}) => {
     return (
         <div className="notes-modal">
             <ul className={'notes-list'}>
-                {notes.map((item) => (
-                    <li className="notes">{item.text}</li>
+                {notes.map((item,index) => (
+                    <li className="notes" key={index}>{item.text}</li>
                 ))}
             </ul>
             <button className="close" onClick={handleClose}>Close</button>

@@ -9,7 +9,6 @@ export const notesSlice = createSlice({
     initialState,
     reducers: {
         setNote: (state, action) => {
-            console.log('state', state)
             const {date, text } = action.payload
             state.notes = [...state.notes, {date, text }]
         }

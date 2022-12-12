@@ -9,7 +9,7 @@ const CalendarWeek = ({week, state, setState,setIsOpenModal,setIsOpenModalNotes}
             return <CalendarDay
                 date={date}
                 state={state}
-                index={index}
+                key={index}
                 setState={setState}
                 setIsOpenModal={setIsOpenModal}
                 setIsOpenModalNotes={setIsOpenModalNotes}
