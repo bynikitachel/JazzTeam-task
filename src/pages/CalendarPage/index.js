@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setNote } from '../../store/reducers/notes'
 import Button from '../../components/Button'
@@ -30,6 +30,8 @@ const CALENDAR_DATA = {
 
 const Calendar = ({ date = new Date() }) => {
   const isAuthorised = useSelector(({ auth }) => auth.isAuthorised)
+  const notes = useSelector(({ notes }) => notes.notes)
+
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const [state, setState] = useState({
@@ -38,8 +40,13 @@ const Calendar = ({ date = new Date() }) => {
     selectedDate: null,
   })
   const [isOpenModal, setIsOpenModal] = useState(false)
+  const [searchValue, setSearchValue] = useState('')
 
   const monthData = calendar.getMonthData(state.date.getFullYear(), state.date.getMonth())
+
+  const searchResult = useMemo(() => {
+    return notes.filter((e) => e.text.includes(searchValue))
+  }, [searchValue])
 
   useEffect(() => {
     if (!isAuthorised) {
@@ -80,24 +87,41 @@ const Calendar = ({ date = new Date() }) => {
     ))
   const renderMonth = month()
 
+  const renderContent = () => {
+    if (searchResult.length && searchValue) {
+      return searchResult.map((e) => <div className="result-item">{e.text}</div>)
+    }
+    return (
+      <table className="calendar-body">
+        <thead className="week-days">
+          <tr>{renderWeekDays}</tr>
+        </thead>
+        <tbody>{renderMonth}</tbody>
+      </table>
+    )
+  }
+
   return (
-      <div>
-        {isOpenModal && <CreateNoteModal handleAddEvent={handleAddEvent} handleCancelModal={setIsOpenModal} />}
-        <div className="calendar">
-          <h1>Calendar</h1>
+    <div>
+      {isOpenModal && <CreateNoteModal handleAddEvent={handleAddEvent} handleCancelModal={setIsOpenModal} />}
+      <div className="calendar">
+        <h1>Calendar</h1>
+        <div className="calendar-actions">
           <div className="months-navigation">
             <Button buttonText="<" onClick={handlePrevButtonClick} />
             <div className="calendar-date">{renderCalendarDate}</div>
             <Button buttonText=">" onClick={handleNextButtonClick} />
           </div>
-          <table className="calendar-body">
-            <thead className="week-days">
-              <tr>{renderWeekDays}</tr>
-            </thead>
-            <tbody>{renderMonth}</tbody>
-          </table>
+          <input
+            type="text"
+            placeholder="Search..."
+            onChange={(e) => setSearchValue(e.target.value)}
+            className="search"
+          ></input>
         </div>
+        {renderContent()}
       </div>
+    </div>
   )
 }
 export default Calendar

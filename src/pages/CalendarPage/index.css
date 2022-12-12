@@ -10,7 +10,6 @@
 }
 
 .months-navigation {
-  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   background-color: #5e646f;
@@ -34,8 +33,16 @@
   margin-right: 10px;
 }
 
+.calendar-actions{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
 .search {
   width: 30%;
+  margin: 0;
 }
 
 .calendar-body {
@@ -91,4 +98,11 @@ tbody td {
 .add-button:hover {
   transform: scale(1.1);
   background-color: rgba(20, 210, 20, 0.28);
+}
+
+.result-item{
+  margin: 20px 0;
+  background-color: #b69090;
+  padding: 20px;
+  border-radius: 20px;
 }
