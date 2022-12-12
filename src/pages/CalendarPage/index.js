@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
+import {setNote} from "../../store/reducers/notes";
 import Button from "../../components/Button";
 import * as calendar from "./calendar";
 import CalendarWeek from "./CalendarWeek";
 import CreateNoteModal from "../../components/CreateNoteModal";
-import {setNote} from "../../store/reducers/notes";
 
 import './index.css';
 

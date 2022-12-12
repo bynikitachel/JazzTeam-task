@@ -23,6 +23,7 @@ const CalendarDay = ({state, setState, date, index, setIsOpenModal}) => {
         }));
         setIsOpenModal(true);
     }
+
     const handleDayClick = () => {
         setIsOpenModalNotes(true)
     }
@@ -51,7 +52,7 @@ const CalendarDay = ({state, setState, date, index, setIsOpenModal}) => {
             </td>
             : <td key={index}/>
     }
-    const renderDay=day();
+    const renderDay = day();
 
     return (
         <>

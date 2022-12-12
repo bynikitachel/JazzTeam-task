@@ -2,7 +2,7 @@ import React from 'react';
 import CalendarDay from "./CalendarDay";
 
 
-const CalendarWeek = ({week, state, setState,setIsOpenModal,setIsOpenModalNotes}) => {
+const CalendarWeek = ({week, state, setState, setIsOpenModal, setIsOpenModalNotes}) => {
 
     const calendarDay = () => {
         return week.map((date, index) => {
