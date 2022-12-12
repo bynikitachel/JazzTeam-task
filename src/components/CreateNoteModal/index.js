@@ -22,6 +22,7 @@ const CreateNoteModal = ({editingNote = '', handleAddEvent, handleCancelModal}) 
                 <Button
                     buttonText='Done'
                     onClick={() => handleAddEvent(textNote)}
+                    disabled={!textNote}
                 />
             </div>
         </div>

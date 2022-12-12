@@ -29,7 +29,7 @@ const LoginPage = () => {
     return (
         <div className='form-container'>
             <div className='inputs-container'>
-                <h1>Admin</h1>
+                <h1>{ADMIN.name}</h1>
                 <h4>Input username</h4>
                 <input
                     type='text'

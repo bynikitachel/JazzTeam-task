@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import TableRow from './TableRow';
+import TableRow from '../../components/TableRow';
 import superHeroes from '../../JSON/superHeroes.json';
 import {useSelector} from "react-redux";
 

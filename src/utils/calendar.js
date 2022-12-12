@@ -19,7 +19,7 @@ const Month = {
     December: 11
 };
 
-export function areEqual(a, b) {
+export const areEqual = (a, b) => {
     if (!a || !b) return false;
 
     return (
@@ -29,11 +29,11 @@ export function areEqual(a, b) {
     );
 }
 
-export function isLeapYear(year) {
+export const isLeapYear = (year) => {
     return !((year % 4) || (!(year % 100) && (year % 400)));
 }
 
-export function getDaysInMonth(date) {
+export const getDaysInMonth = (date) => {
     const month = date.getMonth();
     const year = date.getFullYear();
     const daysInMonth = DAYS_IN_MONTH[month];
@@ -45,13 +45,13 @@ export function getDaysInMonth(date) {
     }
 }
 
-export function getDayOfWeek(date) {
+export const getDayOfWeek = (date) => {
     const dayOfWeek = date.getDay();
 
     return WEEK_DAYS_FROM_MONDAY[dayOfWeek];
 }
 
-export function getMonthData(year, month) {
+export const getMonthData = (year, month) => {
     const result = [];
     const date = new Date(year, month);
     const daysInMonth = getDaysInMonth(date);

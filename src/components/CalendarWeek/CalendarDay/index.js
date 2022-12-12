@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import classnames from "classnames";
-import * as calendar from "../../calendar";
+import * as calendar from "../../../utils/calendar";
 import {useSelector} from "react-redux";
-import NotesModal from '../../../../components/NotesModal';
-import Button from "../../../../components/Button";
+import NotesModal from '../../NotesModal';
+import Button from "../../Button";
 
 
 const CalendarDay = ({state, setState, date, index, setIsOpenModal}) => {
