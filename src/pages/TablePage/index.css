@@ -1,97 +1,97 @@
 .container-table {
-    background-color: rgb(70, 65, 65);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-    padding: 40px;
-    border-radius: 20px;
-    box-sizing: border-box;
+  background-color: rgb(70, 65, 65);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  padding: 40px;
+  border-radius: 20px;
+  box-sizing: border-box;
 }
 
 .container-info {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .container-info div:nth-child(1) {
-    background: rgb(100, 81, 81);
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+  background: rgb(100, 81, 81);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .container-info div:nth-child(2) {
-    background: rgb(136, 101, 101);
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+  background: rgb(136, 101, 101);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .container-info div {
-    display: inline-block;
-    padding: 10px;
+  display: inline-block;
+  padding: 10px;
 }
 
 .table-body {
-    height: 400px;
-    overflow: auto;
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 20px;
-    display: block;
+  height: 400px;
+  overflow: auto;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 20px;
+  display: block;
 }
 
 .table-head {
-    border-radius: 20px;
-    background: rgb(87, 85, 85);
-    position: sticky;
-    top: 0;
-    left: 0;
-    color: rgb(238, 196, 196);
-    z-index: 999 !important;
+  border-radius: 20px;
+  background: rgb(87, 85, 85);
+  position: sticky;
+  top: 0;
+  left: 0;
+  color: rgb(238, 196, 196);
+  z-index: 999 !important;
 }
 
 .table-head th {
-    padding: 10px;
+  padding: 10px;
 }
 
 .row td {
-    padding: 10px;
-    background: rgb(180, 176, 176);
-    color: rgb(0, 0, 0);
-    position: relative;
+  padding: 10px;
+  background: rgb(180, 176, 176);
+  color: rgb(0, 0, 0);
+  position: relative;
 }
 
 .active-row td {
-    background: rgb(60, 63, 63) !important;
-    color: aliceblue;
-    cursor: pointer;
-    padding: 10px;
+  background: rgb(60, 63, 63) !important;
+  color: aliceblue;
+  cursor: pointer;
+  padding: 10px;
 }
 
 .first-column {
-    position: sticky;
-    left: 0;
-    z-index: 998 !important;
+  position: sticky;
+  left: 0;
+  z-index: 998 !important;
 }
 
 tr .first-column {
-    background: rgb(87, 85, 85);
+  background: rgb(87, 85, 85);
 }
 .row td {
-    background: rgb(180, 176, 176) !important;
+  background: rgb(180, 176, 176) !important;
 }
 
 tr td:nth-child(-n + 1) {
-    position: sticky;
-    left: 0;
-    z-index: 998 !important;
+  position: sticky;
+  left: 0;
+  z-index: 998 !important;
 }
 
 .table-head-powers {
-    width: 100px;
+  width: 100px;
 }
 
 .row {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .row-checkbox {
-    margin: 0;
-    border-radius: 10px;
+  margin: 0;
+  border-radius: 10px;
 }

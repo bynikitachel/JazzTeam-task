@@ -1,31 +1,31 @@
 .create-note-modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #c2c0c0;
-    width: 50%;
-    height: 50%;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    z-index: 100000000;
-    box-shadow: 0 0 10px rgb(0 0 0);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #c2c0c0;
+  width: 50%;
+  height: 50%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100000000;
+  box-shadow: 0 0 10px rgb(0 0 0);
 }
 
 .text-field {
-    margin: 50px 20px 20px 20px;
-    height: 100%;
-    border-radius: 20px;
-    box-shadow: none;
+  margin: 50px 20px 20px 20px;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: none;
 }
 
 .modal-buttons-container {
-    display: flex;
-    justify-content: flex-end;
-    padding: 0 20px 20px 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 20px 20px 0;
 }
 
 .modal-buttons-container button:first-child {
-    margin-right: 10px;
+  margin-right: 10px;
 }

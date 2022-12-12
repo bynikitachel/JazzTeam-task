@@ -1,94 +1,94 @@
 .calendar {
-    /*min-height: 80vh;*/
+  /*min-height: 80vh;*/
 }
 
 .control-panel {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #726d6d;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #726d6d;
+  align-items: center;
 }
 
 .months-navigation {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    background-color: #5e646f;
-    width: 200px;
-    padding: 5px;
-    border-radius: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #5e646f;
+  width: 200px;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .calendar-date {
-    margin: 0 10px;
-    align-items: center;
-    display: flex;
+  margin: 0 10px;
+  align-items: center;
+  display: flex;
 }
 
 .buttons-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .buttons-container button:first-child {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .search {
-    width: 30%;
+  width: 30%;
 }
 
 .calendar-body {
-    cursor: pointer;
-    width: 100%;
-    height: 500px;
-    padding: 20px;
-    background-color: #726d6d;
-    margin-top: 20px;
-    border-radius: 10px;
-    table-layout: fixed;
+  cursor: pointer;
+  width: 100%;
+  height: 500px;
+  padding: 20px;
+  background-color: #726d6d;
+  margin-top: 20px;
+  border-radius: 10px;
+  table-layout: fixed;
 }
 
 .calendar-body input {
-    width: 100%;
-    margin: 0;
-    border-radius: 0;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
 }
 
 .calendar .day.selected {
-    border: 2px solid dodgerblue;
+  border: 2px solid dodgerblue;
 }
 
 .calendar .day.today {
-    background-color: dodgerblue;
-    color: white;
+  background-color: dodgerblue;
+  color: white;
 }
 
 .calendar .day.today:hover {
-    background-color: #0081ff;
+  background-color: #0081ff;
 }
 
 .calendar .day.today.selected {
-    border: 2px solid lightgray;
+  border: 2px solid lightgray;
 }
 
 tbody td {
-    background-color: #8a8888;
-    position: relative;
+  background-color: #8a8888;
+  position: relative;
 }
 
 .add-button {
-    color: white;
-    font-size: 16px;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    z-index: 99999;
-    background-color: #c2c0c0;
-    box-shadow: none;
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 99999;
+  background-color: #c2c0c0;
+  box-shadow: none;
 }
 
 .add-button:hover {
-    transform: scale(1.1);
-    background-color: rgba(20, 210, 20, 0.28);
+  transform: scale(1.1);
+  background-color: rgba(20, 210, 20, 0.28);
 }

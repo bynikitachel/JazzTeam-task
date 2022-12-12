@@ -1,80 +1,80 @@
 .container-planets {
-    box-sizing: border-box;
-    padding: 80px 40px 40px;
-    border-radius: 20px;
-    background-color: rgb(70, 65, 65);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  box-sizing: border-box;
+  padding: 80px 40px 40px;
+  border-radius: 20px;
+  background-color: rgb(70, 65, 65);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 .container-planet {
-    width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background-image: url('../../img/space.webp');
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 20px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-image: url('../../img/space.webp');
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .planet {
-    margin-bottom: 40px;
-    background-color: rgb(54, 47, 47);
-    border-radius: 20px;
+  margin-bottom: 40px;
+  background-color: rgb(54, 47, 47);
+  border-radius: 20px;
 }
 
 .image-planet {
-    height: 200px;
-    width: 200px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+  height: 200px;
+  width: 200px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .description-planet {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-    text-indent: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  text-indent: 20px;
 }
 
 .mercury {
-    background-image: url('../../img/mercury.png');
-    background-size: cover;
+  background-image: url('../../img/mercury.png');
+  background-size: cover;
 }
 
 .venus {
-    background-image: url('../../img/venus.png');
-    background-size: cover;
+  background-image: url('../../img/venus.png');
+  background-size: cover;
 }
 
 .earth {
-    background-image: url('../../img/earth.png');
-    background-size: cover;
+  background-image: url('../../img/earth.png');
+  background-size: cover;
 }
 
 .mars {
-    background-image: url('../../img/mars.png');
-    background-size: cover;
+  background-image: url('../../img/mars.png');
+  background-size: cover;
 }
 
 .saturn {
-    background-image: url('../../img/saturn.png');
-    background-size: cover;
+  background-image: url('../../img/saturn.png');
+  background-size: cover;
 }
 
 .jupiter {
-    background-image: url('../../img/jupiter.png');
-    background-size: cover;
+  background-image: url('../../img/jupiter.png');
+  background-size: cover;
 }
 
 .uranus {
-    background-image: url('../../img/uranus.png');
-    background-size: cover;
+  background-image: url('../../img/uranus.png');
+  background-size: cover;
 }
 
 .neptune {
-    background-image: url('../../img/neptune.png');
-    background-size: cover;
+  background-image: url('../../img/neptune.png');
+  background-size: cover;
 }

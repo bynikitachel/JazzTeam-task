@@ -5,25 +5,25 @@ import storage from 'redux-persist/lib/storage'
 import { persistReducer, persistStore } from 'redux-persist'
 
 const persistConfig = {
-    key: 'root',
-    storage,
+  key: 'root',
+  storage,
 }
 
 const persistedReducer = persistReducer(persistConfig, authReducer)
 const persistedReducer2 = persistReducer(persistConfig, notesReducer)
 
 const reducers = combineReducers({
-    auth: persistedReducer,
-    notes: persistedReducer2,
+  auth: persistedReducer,
+  notes: persistedReducer2,
 })
 
 export const store = configureStore({
-    reducer: reducers,
-    middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware({
-            serializableCheck: false,
-        }),
-    devTools: true,
+  reducer: reducers,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
+  devTools: true,
 })
 
 export const persistor = persistStore(store)
