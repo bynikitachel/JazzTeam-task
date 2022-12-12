@@ -1,8 +1,8 @@
-import {combineReducers, configureStore} from '@reduxjs/toolkit';
-import authReducer from './reducers/auth';
-import notesReducer from './reducers/notes';
-import storage from 'redux-persist/lib/storage';
-import { persistReducer, persistStore } from 'redux-persist';
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import authReducer from './reducers/auth'
+import notesReducer from './reducers/notes'
+import storage from 'redux-persist/lib/storage'
+import { persistReducer, persistStore } from 'redux-persist'
 
 const persistConfig = {
     key: 'root',
@@ -13,17 +13,17 @@ const persistedReducer = persistReducer(persistConfig, authReducer)
 const persistedReducer2 = persistReducer(persistConfig, notesReducer)
 
 const reducers = combineReducers({
-    auth : persistedReducer,
-    notes:persistedReducer2
+    auth: persistedReducer,
+    notes: persistedReducer2,
 })
 
-export const store= configureStore({
+export const store = configureStore({
     reducer: reducers,
-    middleware: getDefaultMiddleware =>
+    middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
             serializableCheck: false,
         }),
-    devTools :true
+    devTools: true,
 })
 
 export const persistor = persistStore(store)

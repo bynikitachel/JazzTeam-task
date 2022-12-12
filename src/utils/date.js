@@ -1,5 +1,5 @@
 function padTo2Digits(num) {
-    return num.toString().padStart(2, '0');
+    return num.toString().padStart(2, '0')
 }
 
 export const formatDate = (date) => {
@@ -7,5 +7,5 @@ export const formatDate = (date) => {
         padTo2Digits(date.getDate()),
         padTo2Digits(date.getMonth() + 1),
         date.getFullYear(),
-    ].join('/');
+    ].join('/')
 }

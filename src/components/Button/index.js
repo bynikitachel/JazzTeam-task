@@ -1,16 +1,12 @@
-import React from 'react';
-import './index.css';
+import React from 'react'
+import './index.css'
 
-const Button = ({className, buttonText, onClick, disabled = false}) => {
+const Button = ({ className, buttonText, onClick, disabled = false }) => {
     return (
-        <button
-            className={className}
-            onClick={onClick}
-            disabled={disabled}
-        >
+        <button className={className} onClick={onClick} disabled={disabled}>
             {buttonText}
         </button>
-    );
-};
+    )
+}
 
-export default Button;
+export default Button

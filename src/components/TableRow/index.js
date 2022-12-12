@@ -1,14 +1,13 @@
-import { useState } from 'react';
-import TableCell from './TableCell';
+import { useState } from 'react'
+import TableCell from './TableCell'
 
 const TableRow = ({ member, changeCounterFunc }) => {
-
-    const [isActiveRow, setIsActiveRow] = useState(false);
+    const [isActiveRow, setIsActiveRow] = useState(false)
 
     const toggleRow = () => {
-        changeCounterFunc(!isActiveRow);
-        setIsActiveRow(!isActiveRow);
-    };
+        changeCounterFunc(!isActiveRow)
+        setIsActiveRow(!isActiveRow)
+    }
 
     const getTableTds = () => {
         return Object.values(member).map((value, i) => {
@@ -17,19 +16,24 @@ const TableRow = ({ member, changeCounterFunc }) => {
             }
             return <TableCell key={i} value={value} />
         })
-    };
+    }
 
-    const tableTds = getTableTds();
+    const tableTds = getTableTds()
 
-    const classRow = isActiveRow ? 'active-row' : 'row';
+    const classRow = isActiveRow ? 'active-row' : 'row'
 
     return (
         <tr className={classRow}>
-            <td><input type='checkbox' className='row-checkbox' onClick={() => toggleRow()}/></td>
+            <td>
+                <input
+                    type="checkbox"
+                    className="row-checkbox"
+                    onClick={() => toggleRow()}
+                />
+            </td>
             {tableTds}
         </tr>
-
-    );
+    )
 }
 
-export default TableRow;
+export default TableRow

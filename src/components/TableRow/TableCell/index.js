@@ -1,19 +1,18 @@
-import { useRef, useState } from 'react';
-import CellChange from './CellChange';
+import { useRef, useState } from 'react'
+import CellChange from './CellChange'
 
 const TableCell = ({ keyI, value }) => {
-
-    const [isChanged, setIsChanged] = useState(false);
-    const [cellValue, setCellValue] = useState(value);
-    const tableTd = useRef(null);
+    const [isChanged, setIsChanged] = useState(false)
+    const [cellValue, setCellValue] = useState(value)
+    const tableTd = useRef(null)
 
     const changeTd = () => {
-        setIsChanged(true);
+        setIsChanged(true)
     }
 
-    const cellText = cellValue ? cellValue : value;
+    const cellText = cellValue ? cellValue : value
 
-    const change = isChanged ?
+    const change = isChanged ? (
         <CellChange
             tableTd={tableTd}
             isChanged={isChanged}
@@ -21,11 +20,16 @@ const TableCell = ({ keyI, value }) => {
             cellValue={cellValue}
             value={value}
             setCellValue={setCellValue}
-        /> : cellText;
+        />
+    ) : (
+        cellText
+    )
 
     return (
-        <td key={keyI} ref={tableTd} onDoubleClick={() => changeTd()}>{change}</td>
+        <td key={keyI} ref={tableTd} onDoubleClick={() => changeTd()}>
+            {change}
+        </td>
     )
 }
 
-export default TableCell;
+export default TableCell

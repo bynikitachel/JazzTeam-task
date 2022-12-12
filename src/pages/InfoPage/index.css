@@ -10,7 +10,7 @@
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    background-image: url("../../img/space.webp");
+    background-image: url('../../img/space.webp');
     display: flex;
     justify-content: center;
     box-sizing: border-box;
@@ -40,41 +40,41 @@
 }
 
 .mercury {
-    background-image: url("../../img/mercury.png");
+    background-image: url('../../img/mercury.png');
     background-size: cover;
 }
 
 .venus {
-    background-image: url("../../img/venus.png");
+    background-image: url('../../img/venus.png');
     background-size: cover;
 }
 
 .earth {
-    background-image: url("../../img/earth.png");
+    background-image: url('../../img/earth.png');
     background-size: cover;
 }
 
 .mars {
-    background-image: url("../../img/mars.png");
+    background-image: url('../../img/mars.png');
     background-size: cover;
 }
 
 .saturn {
-    background-image: url("../../img/saturn.png");
+    background-image: url('../../img/saturn.png');
     background-size: cover;
 }
 
 .jupiter {
-    background-image: url("../../img/jupiter.png");
+    background-image: url('../../img/jupiter.png');
     background-size: cover;
 }
 
 .uranus {
-    background-image: url("../../img/uranus.png");
+    background-image: url('../../img/uranus.png');
     background-size: cover;
 }
 
 .neptune {
-    background-image: url("../../img/neptune.png");
+    background-image: url('../../img/neptune.png');
     background-size: cover;
 }

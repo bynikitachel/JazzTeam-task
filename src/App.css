@@ -1,19 +1,19 @@
-.App{
-  background: rgb(31, 30, 30, 0.9);
+.App {
+    background: rgb(31, 30, 30, 0.9);
 }
 a,
 a:active,
 a:hover {
-  text-decoration: none;
-  color: rgb(196, 179, 194);
+    text-decoration: none;
+    color: rgb(196, 179, 194);
 }
 
 .container {
-  box-sizing: border-box;
-  width: 70%;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 80px 40px 40px;
-  background: rgb(31, 30, 30, 0.9);
-  color: #fff;
+    box-sizing: border-box;
+    width: 70%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 80px 40px 40px;
+    background: rgb(31, 30, 30, 0.9);
+    color: #fff;
 }

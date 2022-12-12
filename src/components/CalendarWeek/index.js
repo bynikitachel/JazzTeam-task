@@ -1,28 +1,30 @@
-import React from 'react';
-import CalendarDay from "./CalendarDay";
+import React from 'react'
+import CalendarDay from './CalendarDay'
 
-
-const CalendarWeek = ({week, state, setState, setIsOpenModal, setIsOpenModalNotes}) => {
-
+const CalendarWeek = ({
+    week,
+    state,
+    setState,
+    setIsOpenModal,
+    setIsOpenModalNotes,
+}) => {
     const calendarDay = () => {
         return week.map((date, index) => {
-            return <CalendarDay
-                date={date}
-                state={state}
-                key={index}
-                setState={setState}
-                setIsOpenModal={setIsOpenModal}
-                setIsOpenModalNotes={setIsOpenModalNotes}
-            />
+            return (
+                <CalendarDay
+                    date={date}
+                    state={state}
+                    key={index}
+                    setState={setState}
+                    setIsOpenModal={setIsOpenModal}
+                    setIsOpenModalNotes={setIsOpenModalNotes}
+                />
+            )
         })
     }
-    const renderCalendarDay = calendarDay();
+    const renderCalendarDay = calendarDay()
 
-    return (
-        <tr className="week">
-            {renderCalendarDay}
-        </tr>
-    )
+    return <tr className="week">{renderCalendarDay}</tr>
 }
 
-export default CalendarWeek;
+export default CalendarWeek

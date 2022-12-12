@@ -1,7 +1,7 @@
-import {createSlice} from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit'
 
-const initialState= {
-    notes:[]
+const initialState = {
+    notes: [],
 }
 
 export const notesSlice = createSlice({
@@ -9,12 +9,12 @@ export const notesSlice = createSlice({
     initialState,
     reducers: {
         setNote: (state, action) => {
-            const {date, text } = action.payload
-            state.notes = [...state.notes, {date, text }]
-        }
+            const { date, text } = action.payload
+            state.notes = [...state.notes, { date, text }]
+        },
     },
-});
+})
 
-export const {setNote} = notesSlice.actions;
+export const { setNote } = notesSlice.actions
 
-export default notesSlice.reducer;
+export default notesSlice.reducer
