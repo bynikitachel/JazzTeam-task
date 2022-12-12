@@ -61,6 +61,7 @@
     background: rgb(60, 63, 63) !important;
     color: aliceblue;
     cursor: pointer;
+    padding: 10px;
 }
 
 .first-column {

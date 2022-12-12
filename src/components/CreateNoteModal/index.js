@@ -10,6 +10,7 @@ const CreateNoteModal = ({editingNote = '', handleAddEvent, handleCancelModal}) 
     return (
         <div className="create-note-modal">
             <textarea
+                className="text-field"
                 value={textNote}
                 onChange={e => setTextNote(e.target.value)}
             ></textarea>

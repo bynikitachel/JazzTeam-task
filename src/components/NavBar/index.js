@@ -39,7 +39,7 @@ const NavBar = () => {
 
     return (
         <div className='navigation'>
-            <ul>
+            <ul className="links-list">
                 <li><NavLink to="/">Main</NavLink></li>
                 <li><NavLink to="/info">Info</NavLink></li>
                 <li><NavLink to="/profile">Profile</NavLink></li>

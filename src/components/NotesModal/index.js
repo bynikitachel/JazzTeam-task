@@ -6,6 +6,7 @@ const NotesModal = ({notes,handleClose}) => {
 
     return (
         <div className="notes-modal">
+            <h1>Notes</h1>
             <ul className={'notes-list'}>
                 {notes.map((item,index) => (
                     <li className="notes" key={index}>{item.text}</li>

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import Button from "../../components/Button";
 import * as calendar from "./calendar";
 import CalendarWeek from "./CalendarWeek";
@@ -10,6 +10,8 @@ import './index.css';
 
 
 const Calendar = ({date = new Date()}) => {
+
+    const isAuthorised = useSelector(({auth}) => auth.isAuthorised);
     const dispatch= useDispatch()
     const [state, setState] = useState({
         date: date, currentDate: new Date(), selectedDate: null,
@@ -56,8 +58,8 @@ const Calendar = ({date = new Date()}) => {
         setIsOpenModal(false)
     }
 
-    return (
-        <div>
+    return isAuthorised && (
+        <div className={isOpenModal ? "blur" : ""}>
             {isOpenModal &&
                 <CreateNoteModal handleAddEvent={handleAddEvent} handleCancelModal={setIsOpenModal}/>}
             <div className="calendar">

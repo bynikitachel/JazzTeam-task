@@ -48,7 +48,8 @@
     border-radius: 10px;
     table-layout: fixed;
 }
-.calendar-body input{
+
+.calendar-body input {
     width: 100%;
     margin: 0;
     border-radius: 0;
@@ -70,11 +71,13 @@
 .calendar .day.today.selected {
     border: 2px solid lightgray;
 }
-tbody td{
+
+tbody td {
     background-color: #8a8888;
     position: relative;
 }
-.add-button{
+
+.add-button {
     color: white;
     font-size: 16px;
     position: absolute;
@@ -85,7 +88,7 @@ tbody td{
     box-shadow: none;
 }
 
-.add-button:hover{
+.add-button:hover {
     transform: scale(1.1);
     background-color: rgba(20, 210, 20, 0.28);
 }
